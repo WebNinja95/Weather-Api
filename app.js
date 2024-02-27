@@ -102,6 +102,9 @@ let favorites = [];
 
 
 add.addEventListener('click', function() {
+  if(favorites.length >=5){
+    return alert('You can add up to 5 zones ')
+  }
   const isFavorite = favorites.some(favorite => favorite.name === main.innerHTML);
   if (!isFavorite) {
     favorites.push({
